@@ -1,13 +1,15 @@
-# Quality score (100 points)
+# 日本語品質評価基準 v1.2
 
-| Dimension | Weight |
-|---|---:|
-| Grammar | 15 |
-| Native Japanese fluency | 20 |
-| Business register | 15 |
-| Clarity and readability | 15 |
-| Terminology consistency | 10 |
-| Factual fidelity | 20 |
-| Evidence discipline | 5 |
+| 評価項目 | 配点 | 評価の観点 |
+|---|---:|---|
+| 文法・表記 | 15 | 誤字脱字、助詞、句読点、表記統一 |
+| 日本語の自然さ | 20 | 受動的な報告調、直訳調、不自然な文末の回避 |
+| ビジネス文書としての適切さ | 15 | 読者・目的に合う敬語と文体 |
+| 明確さ・読みやすさ | 15 | 結果先行、簡潔さ、論理構成 |
+| 専門用語の一貫性 | 10 | 用語の統一と技術的な区別 |
+| 原文への忠実性 | 20 | 数値、意味、条件、責任主体を維持 |
+| 根拠・断定の適切さ | 5 | 実測・推測・計画の区別 |
 
-For each dimension score 1–5; weighted points = weight × rating / 5. Approval threshold: 90+ and no material factual errors or unresolved high-severity issues. 80–89: editorial review. Below 80: rewrite required. Scores are editorial assessments, not statistically validated measurements.
+各項目を1〜5段階で評価し、配点×評価値÷5で合計する。90点以上は提出候補、80〜89点は編集確認、79点以下は再校正を推奨。ただし重大な意味変更、根拠のない断定、数値の改変があれば点数に関係なく不合格とする。
+
+この点数は編集上の参考評価であり、客観的な性能測定値ではない。
