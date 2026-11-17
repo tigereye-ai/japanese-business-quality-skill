@@ -1,31 +1,27 @@
-# Japanese B2B editorial style guide
+# 日本語ビジネス文書スタイルガイド v1.2
 
-## Default register
-- Customer-facing explanatory prose: です・ます. Slide headings: concise noun phrases or short assertions.
-- Prefer clear subject–action–benefit structure. Separate capabilities from expected outcomes.
-- Prefer concrete verbs (削減する、照合する、通知する) to vague nominalizations (最適化、変革、価値創出) when supported by the source.
-- Avoid literal English phrasing, unnecessary katakana, and double honorifics.
-- Keep technical terms, trademarks, identifiers, standards, and defined terms consistent.
-- Do not assume all documents should be polite prose: contracts, specifications, and executive summaries require their own register.
+## 1. 基本文体
+顧客向けの説明文は原則「です・ます調」。見出しや表では簡潔な名詞句を使う。契約書・技術仕様書・役員向け要約などは用途に合わせて調整する。
 
-## Terminology policy
-Create a document-level glossary with approved spelling, acronym expansion at first mention where useful, and prohibited aliases. Distinguish 顔認証, 顔検出, 人物再識別, 生体検知, 本人確認; do not conflate them. Distinguish AIによる支援 from 自動判断 or 完全自動化.
+## 2. 日本語らしい能動表現
+「精度が確認されました」より「精度を測定しました」「30件中29件を正しく判定しました」のように、実際の行為や結果を書く。主語が自明なら省略してよい。ただし主体や責任の所在が変わる書き換えは禁止。
 
-## Claim discipline
-Use 導入を支援, 対応可能, 検証中, 開発予定 only where source evidence supports the stated status. Quantitative claims require source, scope, and baseline where available. Unsupported claims should be flagged rather than silently softened into invented facts.
+## 3. 受動態を残す場合
+「個人情報は暗号化されます」のように対象の状態が主題の場合、受動態が自然。「アクセス権限が制限されます」も自然。受動表現の数ではなく、読みやすさと意味の正確さで判断する。
 
-## Revision levels
-- Light: grammar, punctuation, consistency only.
-- Standard (default): light + fluency, redundancy, readability.
-- Executive: standard + concise structure and decision-oriented framing, without adding facts.
+## 4. 避けたい表現
+- 「〜ということが確認されました」→具体的な結果を直接書く
+- 「〜という結果が得られました」→結果を直接書く
+- 「〜が示唆されました」→推測の度合いを保ち「〜の可能性があります」など
+- 「革新的なソリューション」→具体的な機能・業務上の効果
+- 「最適化させていただきます」→「効率化を支援します」など（意味が一致する場合のみ）
+- 「圧倒的」「完全」「必ず」→裏付けがなければ要確認
 
-## Verification
-Compare each original/revised passage for quantities, dates, product names, negation, modality (may/must), conditionals, ownership, service levels, and legal qualifiers.
+## 5. 技術用語
+「顔検出」と「顔認証」、「画像上の座標」と「実空間の位置」、「把持可能判定」と「実機把持成功率」を区別する。略語は初出時に必要に応じて説明する。
 
-## 能動表現・結果先行の日本語
-- 「有効性が確認されました」→「今回の試験では有効でした」（試験条件を維持）
-- 「処理性能の低下が確認されました」→「同時接続数が増えると処理性能が低下しました」
-- 「高い精度が得られました」→「高い精度を達成しました」
-- 「採用が推奨されます」→「採用を推奨します」
-- 「改善が期待されます」→「改善を目指します」（意図が計画の場合のみ。予測なら「改善する可能性があります」）
-- 受動態を一律禁止しない。主題・責任主体・意味・確実性に合わせて選択する。
+## 6. 根拠の扱い
+数値には対象件数・条件・単位を可能な限り添える。原文にない根拠は追加しない。計画・推測・実証済みの状態を混同しない。
+
+## 7. 校正後の確認
+数値、単位、固有名詞、否定、条件、主語、責任、将来の計画、引用を原文と照合する。意味が変わる可能性があれば「要確認」とする。
