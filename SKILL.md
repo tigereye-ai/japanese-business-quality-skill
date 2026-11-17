@@ -1,53 +1,59 @@
 ---
 name: japanese-business-quality
-description: Review and revise Japanese customer-facing business documents for natural native Japanese, appropriate business register, terminology consistency, and evidence integrity. Use for proposals, sales decks, company profiles, customer emails, reports, and document text. Preserve facts, numbers, product names, legal commitments, and intended meaning.
+description: 日本企業の顧客向け提案書・営業資料・技術レポート・会社案内などを、自然で正確なビジネス日本語に校正する。受動的な報告調や翻訳調を抑え、意味・数値・技術仕様を保持する。
 ---
-# Japanese Business Quality
+# 日本語ビジネス文書校正 Skill v1.2
 
-## Purpose
-Edit Japanese business-facing text to sound like it was written by an experienced native Japanese enterprise sales, consulting, or corporate planning professional. Prioritize factual fidelity over fluency.
+## 目的
+日本語として文法が正しいだけでなく、日本企業の営業責任者・技術責任者・経営企画担当者が実際に書くような、自然で簡潔な顧客向け文章に整える。文章の美しさより、**元の意味・事実・数値を守ること**を優先する。
 
-## Workflow
-1. Identify audience, document purpose, industry, and expected formality. If unspecified, assume Japanese B2B customer-facing materials with clear, restrained です・ます style for prose and concise noun phrases for slide headings.
-2. Extract text while preserving document hierarchy, table relationships, numbers, references, citations, and speaker notes where available.
-3. Flag awkward translationese, excessive honorifics, vague marketing language, grammatical errors, inconsistent terminology, unclear subjects, unsupported assertions, and logical discontinuities.
-4. Rewrite each passage with the minimum necessary changes. Preserve all claims, amounts, dates, specifications, product names, scope, and responsibility allocations. Never invent metrics, customers, certifications, guarantees, or citations.
-5. Verify the revised text against the original for semantic equivalence and factual consistency. Mark ambiguous or unverifiable claims for human review instead of silently fixing them.
-6. Return revised copy, a concise change log, issues requiring confirmation, and a quality score. When editing a file, preserve layout and formatting as far as possible and inspect for overflow.
+## 適用対象
+提案書、営業資料、PowerPointのスライド文言、会社案内、技術比較レポート、顧客向けメール、Markdown、Word、PDFなど。ファイルの直接編集は実行環境の対応機能がある場合に限る。
 
-## Hard constraints
-- Never alter numbers, units, dates, pricing, contractual terms, legal disclaimers, brand names, model identifiers, or technical capabilities without explicit instruction.
-- Do not upgrade aspirational statements into guarantees; distinguish planned, under development, demonstrated, and production-ready.
-- Do not add unsupported superlatives such as 業界最高, 完全, 必ず, 100%, 圧倒的.
-- Preserve the intended level of politeness; avoid redundant させていただく and excessive 弊社/貴社.
-- Do not replace precise technical terms with imprecise generalizations.
-- Treat quotations, citations, and regulatory language as protected; propose changes separately.
-- If the source is unclear, label 要確認 and explain why.
+## 校正の基本方針
+1. **結果を先に伝える。** 「〜ということが確認されました」より「〜件中〜件を検出しました」のように、事実を直接書く。
+2. **受動表現を必要以上に使わない。** 「確認されました」「示されました」「実施されました」「期待されます」の連続を避ける。ただし「個人情報は暗号化されます」など、状態や対象を主題にする方が自然なら残す。
+3. **能動態への機械的な置換をしない。** 主語、責任主体、推測と事実の区別を維持する。「期待されます」を無条件に「目指します」へ変えると意味が変わるため禁止。
+4. **直訳調・抽象表現を減らす。** 「シームレス」「エンパワー」「革新的なソリューション」などは、根拠のある具体的な機能や効果で説明する。
+5. **過剰な敬語を避ける。** 顧客向け本文は原則「です・ます調」。スライド見出しは簡潔な名詞句や短い言い切りを使う。「〜させていただきます」を多用しない。
+6. **技術用語を正確に扱う。** 顔検出と顔認証、認識精度と把持成功率、推論時間と処理全体の遅延などを混同しない。
+7. **冗長な報告調を削る。** 「〜という結果が得られました」「〜であることが明らかになりました」は、意味が変わらない範囲で短くする。
+8. **数値と根拠を守る。** モデル名、製品名、単位、測定条件、サンプル数、契約条件、法的表現、引用、否定・条件文を勝手に変えない。
+9. **実証・計画・推測を区別する。** 実測していない性能を断定しない。未確認事項は「要確認」と明記する。
+10. **文章のリズムを整える。** 同じ文末や同じ主語の繰り返しを避け、段落ごとに主張・根拠・判断を整理する。
 
-## Quality rubric
-Rate each dimension 1–5: grammatical correctness, native fluency, business appropriateness, clarity, terminology consistency, factual fidelity, evidence discipline. Calculate a 100-point score using weights in references/rubric.md. Factual fidelity is a hard gate: if a material meaning change is detected, do not mark the document approved regardless of total score.
+## 実行手順
+1. **文書を把握する。** 読者、目的、文体、技術分野、表・図・見出しとの関係を確認する。指定がなければ日本企業向けB2B資料として扱う。
+2. **原文の事実を抽出する。** 数値、固有名詞、技術仕様、主張、測定条件、責任主体、留保条件を一覧化して保護する。
+3. **問題を検出する。** 不自然な受動表現、直訳調、過剰敬語、曖昧な主語、重複、用語の揺れ、根拠のない断定、論理の飛躍を調べる。
+4. **自然な日本語に書き直す。** 可能な限り結果を先に書き、短い能動文を優先する。原文の意味や確実性を変えない。
+5. **原文と照合する。** 数値・条件・単位・主張・責任主体・否定・将来計画の扱いを一つずつ確認する。
+6. **品質を評価する。** `references/rubric.md` に沿って採点し、重大な意味変更があれば不合格とする。
+7. **成果物を提示する。** 修正文、主な修正理由、要確認事項、品質評価を示す。資料ファイルを編集した場合はレイアウト崩れも確認する。
 
-## Output format
+## 出力形式
 ### 修正文
-[final copy]
+校正後の完成文章。原文の見出し・表構造をできるだけ維持する。
+
 ### 主な修正
-[original -> revised, reason]
+変更前 → 変更後 → 修正理由。重要な変更を優先する。
+
 ### 要確認事項
-[only unresolved questions]
+測定条件の矛盾、根拠不足、技術用語の曖昧さなど。なければ「なし」。
+
 ### 品質評価
-[score and approval status]
+100点満点の参考評価と、提出可／要確認／再校正の判定。
 
-## Supporting files
-- `references/style-guide.md`: detailed Japanese editorial conventions.
-- `references/rubric.md`: scoring and release criteria.
-- `examples/before-after.md`: example rewrites.
-- `scripts/check_text.py`: deterministic first-pass linting of UTF-8 text.
+## 禁止事項
+- 根拠のない「業界最高」「完全」「必ず」「100%」を追加しない。
+- 数値・日付・製品名・モデル名・法的条件・契約条件を無断で変更しない。
+- 実測結果から未検証のシステム全体の性能を推定して断定しない。
+- 受動態を一律に禁止しない。
+- 内容が不明な箇所を推測で補完しない。
+- 校正のために原文の結論を強めたり弱めたりしない。
 
-## Native Japanese voice: active, direct, result-first (mandatory)
-- Prefer active constructions with a clear actor or a direct statement of the result. Avoid repetitive passive/reporting endings such as 「確認されました」「示されました」「評価されました」「期待されます」「実施されました」.
-- Do not mechanically replace every passive with 「確認しました」. Prefer concrete findings: 「検出できることが確認されました」→「10件中9件を検出しました」.
-- Avoid report-template padding such as 「〜という結果が得られました」「〜であることが明らかになりました」 when the finding itself can be stated directly.
-- Prefer concise, native B2B prose, using subject omission only where unambiguous. For slides use result-oriented headings and compact declarative statements.
-- Keep passive constructions when the affected party/state is the natural topic (e.g. 「個人情報は暗号化されます」), or when agency is genuinely unknown or material.
-- Do not turn inference into observation, or promise into fact. Retain measured sample sizes, conditions and uncertainty.
-- During QA, count repetitive passive/reporting endings and revise clusters; verify that every rewrite preserves the original actor, agency, certainty and technical meaning.
+## 関連ファイル
+- `references/style-guide.md`：日本語表現の詳細基準
+- `references/rubric.md`：品質評価・合格基準
+- `examples/before-after.md`：修正前後の例
+- `scripts/check_text.py`：ルールベースの一次チェック（意味検証は行わない）
