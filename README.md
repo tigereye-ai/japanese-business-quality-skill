@@ -1,12 +1,36 @@
-# Japanese Business Quality Skill
+# 日本語ビジネス文書校正 Skill
 
-Copy this folder into your agent's skills directory (for example, `.agents/skills/japanese-business-quality/`) and have the agent read `SKILL.md` when reviewing Japanese customer-facing documents. Exact installation and invocation depend on the agent platform.
+**バージョン：1.2**
 
-Example instruction: `この提案書を japanese-business-quality の Standard モードで校正してください。数値・製品名・技術仕様を維持し、修正文、変更履歴、要確認事項、品質評価を出してください。`
+AIが作成した営業資料、提案書、会社案内、技術比較レポートなどを、日本企業の顧客向け資料として自然な日本語に整えるSkillです。
 
-Quick deterministic lint: `python scripts/check_text.py input.txt --json`
+## 特徴
+- 受動的な報告調を減らし、結果を直接伝える
+- 英語の直訳調や過剰な敬語を修正
+- 技術用語・数値・測定条件を維持
+- 根拠のない断定や誇張表現を検出
+- 校正結果と要確認事項を分けて提示
 
-The lint script only flags some patterns; substantive rewriting and semantic verification require a language model and human review for high-stakes claims.
+## 使い方
+Skill対応エージェントの所定ディレクトリ（例：`.agents/skills/japanese-business-quality/`）にリポジトリのファイルを配置し、`SKILL.md` を参照するよう設定します。登録方法は製品によって異なります。
 
-### v1.1 更新
-顧客向け資料で多用される「確認されました」「示されました」などの受動的・翻訳調の表現を抑え、結果先行の自然な能動表現を優先する規則を追加しました。
+指示例：
+
+> japanese-business-qualityを使って、この提案書を校正してください。受動的な報告調を避け、結果を先に伝える自然な日本語にしてください。数値・モデル名・測定条件・技術仕様は変更せず、修正文と要確認事項を出してください。
+
+## ファイル構成
+- `SKILL.md`：日本語による校正指示
+- `references/style-guide.md`：表現・文体・用語のルール
+- `references/rubric.md`：採点基準
+- `examples/before-after.md`：校正例
+- `scripts/check_text.py`：UTF-8テキストの簡易検査
+
+## 一次チェック
+```bash
+python scripts/check_text.py input.txt --json
+```
+一次チェックは表現の候補を抽出するだけです。文脈の判断、書き換え、意味の照合にはLLMと人による確認が必要です。
+
+## 更新履歴
+- v1.2：校正指示・表現基準・品質評価・例文を日本語主体に全面改訂
+- v1.1：能動表現と結果先行の方針を追加
