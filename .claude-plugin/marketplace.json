@@ -1,0 +1,14 @@
+{
+  "name": "tigereye-skills",
+  "owner": {
+    "name": "tigereye-ai"
+  },
+  "plugins": [
+    {
+      "name": "japanese-business-quality",
+      "source": "./",
+      "description": "日本語ビジネス文書校正スキル（一次チェックのフック付き）",
+      "version": "1.2.0"
+    }
+  ]
+}
