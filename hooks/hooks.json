@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 -I \"${CLAUDE_PLUGIN_ROOT}/hooks/post_write_check.py\"",
+            "command": "for p in python3 python; do if \"$p\" -c \"\" >/dev/null 2>&1; then exec \"$p\" -I \"${CLAUDE_PLUGIN_ROOT}/hooks/post_write_check.py\"; fi; done; exit 0",
             "timeout": 30
           }
         ]

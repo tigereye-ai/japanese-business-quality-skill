@@ -18,6 +18,8 @@ from check_text import lint  # noqa: E402
 
 
 def main():
+    # Claude Code は UTF-8 で読むため、Windows（cp932）でも文字化けしないよう UTF-8 に固定する
+    sys.stderr.reconfigure(encoding='utf-8')
     try:
         payload = json.load(sys.stdin)
     except json.JSONDecodeError:

@@ -1,6 +1,6 @@
 {
   "name": "japanese-business-quality",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "日本企業の顧客向け資料を自然で正確なビジネス日本語に校正するスキルと、日本語文書の書き込み時に一次チェックを自動実行するフック",
   "author": {
     "name": "tigereye-ai"
