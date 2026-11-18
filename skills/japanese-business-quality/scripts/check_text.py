@@ -4,6 +4,7 @@ import argparse
 import json
 import pathlib
 import re
+import sys
 
 RULES = [
     (r'シームレスな(?:体験|ソリューション)', '抽象的なカタカナ表現：具体的な業務内容を確認'),
@@ -22,6 +23,8 @@ def lint(text):
     return issues
 
 if __name__ == '__main__':
+    # 日本語版 Windows のコンソール（cp932）でも出力できるよう UTF-8 に固定する
+    sys.stdout.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser()
     parser.add_argument('input', type=pathlib.Path)
     parser.add_argument('--json', action='store_true')
